@@ -113,3 +113,13 @@ footer p a {
 footer p a:hover {
 	color: lightgray;
 }
+
+th {
+	text-align: left;
+	vertical-align: bottom;
+}
+
+td {
+	text-align: left;
+	vertical-align: top;
+}
