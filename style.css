@@ -64,6 +64,11 @@ main {
 	float: right;
 }
 
+.fullwidth {
+	width: 960px;
+	float: center;
+}
+
 aside {
 	background-color: #BBBBBB;
 	width: 170px;
