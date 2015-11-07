@@ -28,18 +28,27 @@ body {
 nav {
 	background-color: #20416C;
 	padding: 10px;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+
+nav li {
+	color: white;
+	display: inline;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	font-size: 15px;
+	font-weight: bold;
 }
 
 nav li a {
 	color: white;
 }
 
-nav li {
-	display: inline;
-	margin-left: 10px;
-	margin-right: 10px;
-	font-size: 15px;
-	font-weight: bold;
+nav li a:hover {
+	color: lightgray;
 }
 
 aside li {
@@ -48,15 +57,18 @@ aside li {
 
 section {
 	background-color: #BBBBBB;
+	background-color: #C0C8D0;
 	margin-top: 5px;
 	margin-bottom: 5px;
 	padding: 10px;
+	border-radius: 10px;
 }
 
 article {
 	background-color: white;
 	margin-top: 5px;
 	padding: 10px 15px;
+	border-radius: 5px;
 }
 
 main {
@@ -66,7 +78,7 @@ main {
 
 .fullwidth {
 	width: 960px;
-	float: center;
+	float: none;
 }
 
 aside {
@@ -82,4 +94,17 @@ footer {
 	background-color: #20416C;
 	color: white;
 	padding: 10px 15px;
+	border-radius: 5px;
+}
+
+footer p {
+	font-size: 12px;
+}
+
+footer p a {
+	color: white;
+}
+
+footer p a:hover {
+	color: lightgray;
 }
