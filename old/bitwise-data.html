@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+
+<head>
+	<meta charset="utf-8" />
+	<title>eZ80 Heaven</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+
+	<header class="banner">
+		<h1 style="float: left">eZ80 Heaven</h1>
+		<img src="img/84pce/84pce-red.png" alt="TI-84+ CE" style="width: 34px; height: 98px; float: right">
+		<h3 style="clear: left">All the eZ80 info you ever cared to know</h3>
+	</header>
+
+	<nav>
+		<ul>
+			<li><a href="index.html">Home</a></li>
+			<li class="currentpage">Bit Shifts</li>
+		</ul>
+	</nav>
+
+	<!-- aside>
+		<h3>Tutorials</h3>
+		<ul>
+			<li><a href="tutorial1">Tutorial1</a></li>
+			<li><a href="tutorial2">Tutorial2</a></li>
+			<li><a href="tutorial3">Tutorial3</a></li>
+		</ul>
+	</aside -->
+
+	<main class="fullwidth">
+
+		<section>
+			<h2>Bit Operations</h2>
+			<article>
+				<p>These are the most common operations for interacting with data on the bit level. All of the opcodes for these instructions take up two bytes. Assume “any 8-bit register” to be one of <code>A</code>, <code>B</code>, <code>C</code>, <code>D</code>, <code>E</code>, <code>H</code> or <code>L</code></p>
+				<br>
+				<table>
+					<thead><tr>
+						<th><pre style="margin: 0px; padding: 0px"><img src="img/bit-ops/small/rl.png">&emsp;</pre></th>
+						<th>RL R</th>
+					</tr></thead>
+					<tbody>
+						<tr>
+						<td><hr>Arguments</td>
+						<td><hr><code>r</code> - Any 8-bit register or <code>(HL)</code>,<code>(IX)</code>,<code>(IY)</code>,<code>(IX+n)</code></td>
+						</tr>
+						<tr>
+						<td><hr>Summary</td>
+						<td><hr>Rotate left</td>
+						</tr>
+						<tr>
+						<td><hr>Description</td>
+						<td><hr>Rotates the contents of <code>r</code> left by one bit. The leaving (7th) bit is moved into the carry and the carry is moved into the first bit of <code>r</code>.</td>
+						</tr>
+						<tr>
+						<td><hr>Uses</td>
+						<td><hr>Reading bit-wise data, most significant bit first</td>
+						</tr>
+					</tbody>
+				</table>
+				<br>
+				<table>
+					<thead><tr>
+						<th><pre style="margin: 0px; padding: 0px"><img src="img/bit-ops/small/rr.png">&emsp;</pre></th>
+						<th>RR R</th>
+					</tr></thead>
+					<tbody>
+						<tr>
+						<td><hr>Arguments</td>
+						<td><hr><code>r</code> - Any 8-bit register or <code>(HL)</code>,<code>(IX)</code>,<code>(IY)</code>,<code>(IX+n)</code></td>
+						</tr>
+						<tr>
+						<td><hr>Summary</td>
+						<td><hr>Rotate right</td>
+						</tr>
+						<tr>
+						<td><hr>Description</td>
+						<td><hr>Rotates the contents of <code>r</code> right by one bit. The leaving (0th) bit is moved into the carry and the carry is moved into the last bit of <code>r</code>.</td>
+						</tr>
+						<tr>
+						<td><hr>Uses</td>
+						<td><hr>Reading bit-wise data, least significant bit first</td>
+						</tr>
+					</tbody>
+				</table>
+				<br>
+				<table>
+					<thead><tr>
+						<th><pre style="margin: 0px; padding: 0px"><img src="img/bit-ops/small/rlc.png">&emsp;</pre></th>
+						<th>RLC R</th>
+					</tr></thead>
+					<tbody>
+						<tr>
+						<td><hr>Arguments</td>
+						<td><hr><code>r</code> - Any 8-bit register or <code>(HL)</code>,<code>(IX)</code>,<code>(IY)</code>,<code>(IX+n)</code></td>
+						</tr>
+						<tr>
+						<td><hr>Summary</td>
+						<td><hr>Rotate left with carry</td>
+						</tr>
+						<tr>
+						<td><hr>Description</td>
+						<td><hr>Rotates the contents of <code>r</code> left by one bit. The leaving (7th) bit is copied into the carry, and into the last bit of <code>r</code>.</td>
+						</tr>
+						<tr>
+						<td><hr>Uses</td>
+						<td><hr>Reading bit-wise data, most significant bit first, while preserving the original data (after it is performed eight times)</td>
+						</tr>
+					</tbody>
+				</table>
+				<br>
+				<table>
+					<thead><tr>
+						<th><pre style="margin: 0px; padding: 0px"><img src="img/bit-ops/small/rrc.png">&emsp;</pre></th>
+						<th>RRC R</th>
+					</tr></thead>
+					<tbody>
+						<tr>
+						<td><hr>Arguments</td>
+						<td><hr><code>r</code> - Any 8-bit register or <code>(HL)</code>,<code>(IX)</code>,<code>(IY)</code>,<code>(IX+n)</code></td>
+						</tr>
+						<tr>
+						<td><hr>Summary</td>
+						<td><hr>Rotate right with carry</td>
+						</tr>
+						<tr>
+						<td><hr>Description</td>
+						<td><hr>Rotates the contents of <code>r</code> right by one bit. The leaving (0th) bit is copied into the carry, and into the last bit of <code>r</code>.</td>
+						</tr>
+						<tr>
+						<td><hr>Uses</td>
+						<td><hr>Reading bit-wise data, least significant bit first, while preserving the original data (after it is performed eight times)</td>
+						</tr>
+					</tbody>
+				</table>
+				<br>
+				<table>
+					<thead><tr>
+						<th><pre style="margin: 0px; padding: 0px"><img src="img/bit-ops/small/sla.png">&emsp;</pre></th>
+						<th>SLA R</th>
+					</tr></thead>
+					<tbody>
+						<tr>
+						<td><hr>Arguments</td>
+						<td><hr><code>r</code> - Any 8-bit register or <code>(HL)</code>,<code>(IX)</code>,<code>(IY)</code>,<code>(IX+n)</code></td>
+						</tr>
+						<tr>
+						<td><hr>Summary</td>
+						<td><hr>Shift left arithmetic</td>
+						</tr>
+						<tr>
+						<td><hr>Description</td>
+						<td><hr>Rotates the contents of <code>r</code> left by one bit. The leaving (7th) bit is moved into the carry, and the first bit of <code>r</code> is reset.</td>
+						</tr>
+						<tr>
+						<td><hr>Uses</td>
+						<td><hr>Very quickly multiplying an 8-bit number by two. If the number becomes greater than 255, the carry flag will be set (else reset).</td>
+						</tr>
+					</tbody>
+				</table>
+				<br>
+				<table>
+					<thead><tr>
+						<th><pre style="margin: 0px; padding: 0px"><img src="img/bit-ops/small/sra.png">&emsp;</pre></th>
+						<th>SRA R</th>
+					</tr></thead>
+					<tbody>
+						<tr>
+						<td><hr>Arguments</td>
+						<td><hr><code>r</code> - Any 8-bit register or <code>(HL)</code>,<code>(IX)</code>,<code>(IY)</code>,<code>(IX+n)</code></td>
+						</tr>
+						<tr>
+						<td><hr>Summary</td>
+						<td><hr>Rotate left</td>
+						</tr>
+						<tr>
+						<td><hr>Description</td>
+						<td><hr>Rotates the contents of <code>r</code> right by one bit, but the 7th bit stays the same. The leaving (0th) bit is moved into the carry.</td>
+						</tr>
+						<tr>
+						<td><hr>Uses</td>
+						<td><hr>Maybe helpful with signed integers? Potentially useful to set all bits of A to equal the 7th bit?</td>
+						</tr>
+					</tbody>
+				</table>
+				<br>
+				<table>
+					<thead><tr>
+						<th><pre style="margin: 0px; padding: 0px"><img src="img/bit-ops/small/srl.png">&emsp;</pre></th>
+						<th>SRL R</th>
+					</tr></thead>
+					<tbody>
+						<tr>
+						<td><hr>Arguments</td>
+						<td><hr><code>r</code> - Any 8-bit register or <code>(HL)</code>,<code>(IX)</code>,<code>(IY)</code>,<code>(IX+n)</code></td>
+						</tr>
+						<tr>
+						<td><hr>Summary</td>
+						<td><hr>Rotate left</td>
+						</tr>
+						<tr>
+						<td><hr>Description</td>
+						<td><hr>Rotates the contents of <code>r</code> right by one bit. The leaving (0th) bit is moved into the carry, and the first bit of <code>r</code> is reset.</td>
+						</tr>
+						<tr>
+						<td><hr>Uses</td>
+						<td><hr>Very quickly dividing an 8-bit number by two. If the number was odd, the carry flag will be set (else reset).</td>
+						</tr>
+					</tbody>
+				</table>
+			</article>
+		</section>
+
+	</main>
+
+	<footer>
+		<p>This website is created and maintained by an individual known as <a href="https://www.cemetech.net/forum/profile.php?mode=viewprofile&u=13055">Hactar</a> on the <a href="http://www.cemtech.net/forum/">Cemetech forums</a>.</p>
+		<p>Feel free to PM me over there if you have any questions, concerns or suggestions about this site.</p>
+	</footer>
+
+</body>
+</html>

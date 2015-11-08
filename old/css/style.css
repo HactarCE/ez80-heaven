@@ -71,7 +71,7 @@ section {
 
 article {
 	background-color: white;
-	margin-top: 5px;
+	margin-top: 10px;
 	padding: 10px 15px;
 	border-radius: 5px;
 }
@@ -100,6 +100,7 @@ footer {
 	color: white;
 	padding: 10px 15px;
 	border-radius: 5px;
+	margin-bottom: 5px;
 }
 
 footer p {
@@ -122,4 +123,8 @@ th {
 td {
 	text-align: left;
 	vertical-align: top;
+}
+
+ul {
+	list-style-position: inside;
 }

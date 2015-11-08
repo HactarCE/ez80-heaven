@@ -1,50 +1,18 @@
-<!DOCTYPE html>
+---
+layout: default
+---
 
-<head>
-	<meta charset="utf-8" />
-	<title>eZ80 Heaven</title>
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-</head>
+<div class="posts">
+  {% for post in site.posts %}
+    <article class="post">
 
-<body>
+      <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
 
-	<header class="banner">
-		<h1 style="float: left">eZ80 Heaven</h1>
-		<img src="img/84pce/84pce-red.png" alt="TI-84+ CE" style="width: 34px; height: 98px; float: right">
-		<h3 style="clear: left">All the eZ80 info you ever cared to know</h3>
-	</header>
+      <div class="entry">
+        {{ post.excerpt }}
+      </div>
 
-	<nav>
-		<ul>
-			<li class="currentpage">Home</li>
-			<li><a href="bit-ops.html">Bit Operations</a></li>
-		</ul>
-	</nav>
-
-	<!-- aside>
-		<h3>Tutorials</h3>
-		<ul>
-			<li><a href="tutorial1">Tutorial1</a></li>
-			<li><a href="tutorial2">Tutorial2</a></li>
-			<li><a href="tutorial3">Tutorial3</a></li>
-		</ul>
-	</aside -->
-
-	<main class="fullwidth">
-
-		<section>
-			<h2>Welcome!</h2>
-			<article>
-				<p>This website is inspired by <a href="http://z80-heaven.wikidot.com/">Z80 Heaven</a>, a place for all the Z80 info you'll want, but I found that although much of the same information applied to the eZ80 processor, it was still different enough that many of their tutorials and instruction set pages weren't accurate on the eZ80. This website is partially to spare others' eyes from the Zilog eZ80 manual, and partially to teach myself, as the best way to learn something is to teach it. This website will be composed mostly of reference pages, but may eventually also have some tutorials further down the road.</p>
-			</article>
-		</section>
-
-	</main>
-
-	<footer>
-		<p>This website is created and maintained by an individual known as <a href="https://www.cemetech.net/forum/profile.php?mode=viewprofile&u=13055">Hactar</a> on the <a href="http://www.cemtech.net/forum/">Cemetech forums</a>.</p>
-		<p>Feel free to PM me over there if you have any questions, concerns or suggestions about this site.</p>
-	</footer>
-
-</body>
-</html>
+      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
+    </article>
+  {% endfor %}
+</div>
