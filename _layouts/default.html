@@ -1,51 +1,52 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
+	<head>
+		<title>{{ site.name }}: {% if page.title %}{{ page.title }}</title>
 
-    {% include meta.html %}
+		{% include meta.html %}
 
-    <!--[if lt IE 9]>
-      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+		<!--[if lt IE 9]>
+			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
 
-    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
-    <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
+		<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
+		<!-- link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" / -->
 
-    <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
-  </head>
+		<!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
+	</head>
 
-  <body>
-    <div class="wrapper-masthead">
-      <div class="container">
-        <header class="masthead clearfix">
-          <a href="{{ site.baseurl }}/" class="site-avatar"><img src="{{ site.avatar }}" /></a>
+	<header class="banner">
+		<h1 style="float: left">eZ80 Heaven</h1>
+		<img src="img/84pce/84pce-red.png" alt="TI-84+ CE" style="width: 34px; height: 98px; float: right">
+		<h3 style="clear: left">All the eZ80 info you ever cared to know</h3>
+	</header>
 
-          <div class="site-info">
-            <h1 class="site-name"><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
-            <p class="site-description">{{ site.description }}</p>
-          </div>
+	<nav>
+		<ul>
+			<li><a href="/" {% if page.url == "/index.html" %}class="currentpage"{% endif %}>Home</a></li>
+			<li><a href="/bitwise-data.html" {% if page.url == "/bitwise-data.html" %}class="currentpage"{% endif %}>Bitwise Data</a></li>
+			<li><a href="/bit-shifts.html" {% if page.url == "/bit-shifts.html" %}class="currentpage"{% endif %}>Bit Shifts</a></li>
+		</ul>
+	</nav>
 
-          <nav>
-            <a href="{{ site.baseurl }}/">Blog</a>
-            <a href="{{ site.baseurl }}/about">About</a>
-          </nav>
-        </header>
-      </div>
-    </div>
+	<!-- aside>
+		<h3>Tutorials</h3>
+		<ul>
+			<li><a href="tutorial1">Tutorial1</a></li>
+			<li><a href="tutorial2">Tutorial2</a></li>
+			<li><a href="tutorial3">Tutorial3</a></li>
+		</ul>
+	</aside -->
 
-    <div id="main" role="main" class="container">
-      {{ content }}
-    </div>
+	<main class="fullwidth">
+		{{ content }}
+	</main>
 
-    <div class="wrapper-footer">
-      <div class="container">
-        <footer class="footer">
-          {% include svg-icons.html %}
-        </footer>
-      </div>
-    </div>
+	<footer>
+		<p>This website is created and maintained by an individual known as <a href="https://www.cemetech.net/forum/profile.php?mode=viewprofile&u=13055">Hactar</a> on the <a href="http://www.cemtech.net/forum/">Cemetech forums</a>.</p>
+		<p>Feel free to PM me over there if you have any questions, concerns or suggestions about this site.</p>
+	</footer>
 
-    {% include analytics.html %}
-  </body>
+		{% include analytics.html %}
+	</body>
 </html>
