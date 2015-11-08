@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>{{ site.name }}: {% if page.title %}{{ page.title }}</title>
+		<title>{{ site.name }}: {% if page.title %}{{ page.title }}{% endif %}</title>
 
 		{% include meta.html %}
 
@@ -47,6 +47,5 @@
 		<p>Feel free to PM me over there if you have any questions, concerns or suggestions about this site.</p>
 	</footer>
 
-		{% include analytics.html %}
 	</body>
 </html>
