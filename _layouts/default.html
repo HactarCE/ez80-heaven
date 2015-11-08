@@ -17,15 +17,16 @@
 
 	<header class="banner">
 		<h1 style="float: left">eZ80 Heaven</h1>
-		<img src="img/84pce/84pce-red.png" alt="TI-84+ CE" style="width: 34px; height: 98px; float: right">
+		<img src="images/84pce/84pce-red.png" alt="TI-84+ CE" style="width: 34px; height: 98px; float: right">
 		<h3 style="clear: left">All the eZ80 info you ever cared to know</h3>
 	</header>
 
 	<nav>
 		<ul>
 			<li><a href="/" {% if page.url == "/index.html" %}class="currentpage"{% endif %}>Home</a></li>
-			<li><a href="/bitwise-data.html" {% if page.url == "/bitwise-data.html" %}class="currentpage"{% endif %}>Bitwise Data</a></li>
-			<li><a href="/bit-shifts.html" {% if page.url == "/bit-shifts.html" %}class="currentpage"{% endif %}>Bit Shifts</a></li>
+			<li><a href="/hello.html" {% if page.url contains "/hello" %}class="currentpage"{% endif %}>Bitwise Data</a></li>
+			<li><a href="/opcode-template.html" {% if page.url contains "/opcode-template" %}class="currentpage"{% endif %}>Bit Shifts</a></li>
+			<li><a href="/welcome.html" {% if page.url contains "/welcome" %}class="currentpage"{% endif %}>Bit Shifts</a></li>
 		</ul>
 	</nav>
 
