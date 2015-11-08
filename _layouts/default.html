@@ -23,10 +23,10 @@
 
 	<nav>
 		<ul>
-			<li><a href="/" {% if page.url == "/index.html" %}class="currentpage"{% endif %}>Home</a></li>
-			<li><a href="/hello.html" {% if page.url contains "/hello" %}class="currentpage"{% endif %}>Bitwise Data</a></li>
-			<li><a href="/opcode-template.html" {% if page.url contains "/opcode-template" %}class="currentpage"{% endif %}>Bit Shifts</a></li>
-			<li><a href="/welcome.html" {% if page.url contains "/welcome" %}class="currentpage"{% endif %}>Bit Shifts</a></li>
+			<li {% if page.url == "/index.html" %}class="currentpage"{% endif %}>				<a href="/">Home</a></li>
+			<li {% if page.url contains "/hello" %}class="currentpage"{% endif %}>				<a href="/hello.html">Hello</a></li>
+			<li {% if page.url contains "/pages/opcode-template" %}class="currentpage"{% endif %}>	<a href="/pages/opcode-template.html">Opcode Template</a></li>
+			<li {% if page.url contains "/welcome" %}class="currentpage"{% endif %}>			<a href="/welcome.html">Welcome</a></li>
 		</ul>
 	</nav>
 
