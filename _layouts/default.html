@@ -23,10 +23,10 @@
 
 	<nav>
 		<ul>
-			<li {% if page.url == "/index.html" %}class="currentpage"{% endif %}>				<a href="{{ site.url }}/">Home</a></li>
-			<li {% if page.url contains "/hello" %}class="currentpage"{% endif %}>				<a href="{{ site.url }}/hello.html">Hello</a></li>
-			<li {% if page.url contains "/pages/opcode-template" %}class="currentpage"{% endif %}>	<a href="{{ site.url }}/pages/opcode-template.html">Opcode Template</a></li>
-			<li {% if page.url contains "/welcome" %}class="currentpage"{% endif %}>			<a href="{{ site.url }}/welcome.html">Welcome</a></li>
+			<li {% if page.url == "/index.html" %}class="currentpage"{% endif %}>				<a href="{{ site.baseurl }}/">Home</a></li>
+			<li {% if page.url contains "/hello" %}class="currentpage"{% endif %}>				<a href="{{ site.baseurl }}/hello">Hello</a></li>
+			<li {% if page.url contains "/pages/opcode-template" %}class="currentpage"{% endif %}>	<a href="{{ site.baseurl }}/pages/opcode-template">Opcode Template</a></li>
+			<li {% if page.url contains "/welcome" %}class="currentpage"{% endif %}>			<a href="{{ site.baseurl }}/welcome">Welcome</a></li>
 		</ul>
 	</nav>
 
