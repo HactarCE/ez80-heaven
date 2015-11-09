@@ -10,6 +10,12 @@ article, aside, footer, header, main, nav, section {
 	margin: 0;
 }
 
+table, th, td {
+	border: 1px solid black;
+	border-collapse: collapse;
+	padding: 5px;
+}
+
 header {
 	background-color: #82A1FF;
 	color: white;
