@@ -10,15 +10,19 @@ article, aside, footer, header, main, nav, section {
 	margin: 0;
 }
 
-table, th, td {
-	border-collapse: collapse;
+table {
+	border-style: hidden;
 	padding: 5px;
 }
-tr {
-	border-bottom: 1px solid gray;
-	border-top: 1px solid gray;
+table tr {
+	border-bottom: 2px solid gray;
+	border-top: 2px solid gray;
+	padding: 5px;
+}
+table td {
 	border-right: 1px solid gray;
 	border-left: 1px solid gray;
+	padding: 5px;
 }
 
 header {
