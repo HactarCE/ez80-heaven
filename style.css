@@ -10,19 +10,17 @@ article, aside, footer, header, main, nav, section {
 	margin: 0;
 }
 
-table {
-	border-style: hidden;
+table, table td, table tr {
 	padding: 5px;
 }
-table tr {
-	border-bottom: 2px solid gray;
-	border-top: 2px solid gray;
-	padding: 5px;
+table {
+	border-style: hidden; 
 }
 table td {
 	border-right: 1px solid gray;
 	border-left: 1px solid gray;
-	padding: 5px;
+	border-bottom: 2px solid gray;
+	border-top: 2px solid gray;
 }
 
 header {
