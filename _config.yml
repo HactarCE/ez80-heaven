@@ -19,7 +19,7 @@ baseurl: "http://HactarCE.github.io/ez80-heaven"
 #
 
 markdown: redcarpet
-highlighter: pygments
+# highlighter: pygments
 permalink: /:title/
 
 # The release of Jekyll Now that you're using
