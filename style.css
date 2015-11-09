@@ -11,9 +11,12 @@ article, aside, footer, header, main, nav, section {
 }
 
 table, th, td {
-	border: 1px solid black;
 	border-collapse: collapse;
 	padding: 5px;
+}
+tr {
+	border-bottom: 1px solid black;
+	border-top: 1px solid black;
 }
 
 header {

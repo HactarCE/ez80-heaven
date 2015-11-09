@@ -1,0 +1,63 @@
+---
+layout: page
+title: RL
+permalink: /instruction-set/rl.html
+---
+
+<table>
+	<thead><tr>
+		<th><pre style="margin: 0px; padding: 0px"><img src="{{ site.baseurl }}img/bit-ops/small/rl.png">&emsp;</pre></th>
+		<th>RL R</th>
+	</tr></thead>
+	<tbody>
+		<tr>
+		<td>Arguments</td>
+		<td><code>r</code> - Any 8-bit register or <code>(HL)</code>,<code>(IX)</code>,<code>(IY)</code>,<code>(IX+n)</code></td>
+		</tr>
+		<tr>
+		<td>Summary</td>
+		<td>Rotate left</td>
+		</tr>
+		<tr>
+		<td>Description</td>
+		<td>Rotates the contents of <code>r</code> left by one bit. The leaving (7th) bit is moved into the carry and the carry is moved into the first bit of <code>r</code>.</td>
+		</tr>
+		<tr>
+		<td>Uses</td>
+		<td>Reading bit-wise data, most significant bit first</td>
+		</tr>
+		<tr>
+		<td>Byte Count</td>
+		<td>Always two bytes</td>
+		</tr>
+		<tr>
+		<td>Clock Cycles</td>
+		<td><table>
+			<tr>
+				<th>Operand</th>
+				<th>RL</th>
+				<th>RL.lis</th>
+				<th>RL.sis</th>
+			</tr>
+			<tr>
+				<td>(HL)</td>
+				<td>5</td>
+				<td>6</td>
+				<td>6</td>
+			</tr>
+			<tr>
+				<td>(IX/Y+n)</td>
+				<td>7</td>
+				<td>8</td>
+				<td>8</td>
+			</tr>
+			<tr>
+				<td>r</td>
+				<td>2</td>
+				<td>N/A</td>
+				<td>N/A</td>
+			</tr>
+		</table></td>
+		</tr>
+	</tbody>
+</table>
