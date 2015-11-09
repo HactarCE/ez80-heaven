@@ -14,13 +14,15 @@ table, table td, table tr {
 	padding: 5px;
 }
 table {
-	border-style: hidden; 
+	border-style: hidden;
+	border-collapse: collapse;
 }
 table td {
-	border-right: 1px solid gray;
-	border-left: 1px solid gray;
-	border-bottom: 2px solid gray;
-	border-top: 2px solid gray;
+	border-top: 2px solid #D0D0D0;
+	border-left: 1px solid #D0D0D0;
+}
+table tbody + tbody {
+	border-top: 2px solid #D0D0D0;
 }
 
 header {
