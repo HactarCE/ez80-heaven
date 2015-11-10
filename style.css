@@ -10,15 +10,15 @@ article, aside, footer, header, main, nav, section {
 	margin: 0;
 }
 
-table, table td, table tr {
-	padding: 5px;
+table, table td, table th {
+	padding: 10px;
 }
 table {
 	border-style: hidden;
 	border-collapse: collapse;
 }
-table td, table th {
-	border-top: 2px solid gray;
+table td {
+	border-top: 1px solid gray;
 	border-left: 1px solid #D0D0D0;
 	border-collapse: collapse;
 }
