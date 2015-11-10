@@ -41,6 +41,13 @@ body {
 	font-size: 15px;
 }
 
+code {
+	background-color: #f7f7f9;
+	border: 1px solid #e1e1e8;
+	color: #444;
+	padding: 2px 4px;
+}
+
 nav {
 	background-color: #20416C;
 	padding: 10px;
