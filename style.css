@@ -4,10 +4,14 @@ article, aside, footer, header, main, nav, section {
 	display: block;
 }
 
-html, body, h1, h2, h3, h4, h5, h6, ul, ol, li, a, /* p, */
+html, body, h1, h2, h3, h4, h5, h6, ul, ol, li, a, p,
 article, aside, footer, header, main, nav, section {	
 	padding: 0;
 	margin: 0;
+}
+
+p + p {
+	margin-top: 2em;
 }
 
 table, table td, table th {
