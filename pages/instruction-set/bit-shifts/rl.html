@@ -7,12 +7,12 @@ permalink: /instruction-set/rl.html
 <table>
 	<thead><tr>
 		<th><pre style="margin: 0px; padding: 0px"><img src="{{ site.baseurl }}/images/bit-ops/small/rl.png">&emsp;</pre></th>
-		<th>RL R</th>
+		<th>RL op8</th>
 	</tr></thead>
 	<tbody>
 		<tr>
 		<td>Arguments</td>
-		<td><code>r</code> - Any 8-bit register or <code>(HL)</code>,<code>(IX+n)</code>,<code>(IY+n)</code></td>
+		<td><code>op8</code> - Any 8-bit register or <code>(HL)</code>,<code>(IX+n)</code>,<code>(IY+n)</code></td>
 		</tr>
 		<tr>
 		<td>Summary</td>
@@ -20,7 +20,7 @@ permalink: /instruction-set/rl.html
 		</tr>
 		<tr>
 		<td>Description</td>
-		<td>Rotates the contents of <code>r</code> left by one bit. The leaving (7th) bit is moved into the carry and the carry is moved into the first bit of <code>r</code>.</td>
+		<td>Rotates the contents of <code>op8</code> left by one bit. The leaving (7th) bit is moved into the carry and the carry is moved into the first bit of <code>op8</code>.</td>
 		</tr>
 		<tr>
 		<td>Uses</td>
@@ -52,7 +52,7 @@ permalink: /instruction-set/rl.html
 				<td>8</td>
 			</tr>
 			<tr>
-				<td><code>r</code></td>
+				<td><code>op8</code></td>
 				<td>2</td>
 				<td>N/A</td>
 				<td>N/A</td>
