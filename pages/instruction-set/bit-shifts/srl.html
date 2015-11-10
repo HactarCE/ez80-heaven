@@ -1,13 +1,13 @@
 ---
 layout: page
-title: RL
-permalink: /instruction-set/rl.html
+title: SRL
+permalink: /instruction-set/srl.html
 ---
 
 <table>
 	<thead><tr>
-		<th><pre style="margin: 0px; padding: 0px"><img src="{{ site.baseurl }}/images/bit-ops/small/rl.png">&emsp;</pre></th>
-		<th>RL R</th>
+		<th><pre style="margin: 0px; padding: 0px"><img src="{{ site.baseurl }}/images/bit-ops/small/srl.png">&emsp;</pre></th>
+		<th>SRL R</th>
 	</tr></thead>
 	<tbody>
 		<tr>
@@ -16,15 +16,15 @@ permalink: /instruction-set/rl.html
 		</tr>
 		<tr>
 		<td>Summary</td>
-		<td>Rotate left</td>
+		<td>Shift right logical</td>
 		</tr>
 		<tr>
 		<td>Description</td>
-		<td>Rotates the contents of <code>r</code> left by one bit. The leaving (7th) bit is moved into the carry and the carry is moved into the first bit of <code>r</code>.</td>
+		<td>Rotates the contents of <code>r</code> right by one bit. The leaving (0th) bit is moved into the carry, and the first bit of <code>r</code> is reset. (Similar to <a href="{{ site.baseurl }}/instruction-set/sla.html">SLA</a>)</td>
 		</tr>
 		<tr>
 		<td>Uses</td>
-		<td>Reading bit-wise data, most significant bit first (left-to-right)</td>
+		<td>Very quickly dividing an 8-bit number by two. If the number was odd, the carry flag will be set (else reset).</td>
 		</tr>
 		<tr>
 		<td>Byte Count</td>
@@ -35,9 +35,9 @@ permalink: /instruction-set/rl.html
 		<td><table>
 			<tr>
 				<th>Operand</th>
-				<th><code>RL</code></th>
-				<th><code>RL.L</code></th>
-				<th><code>RL.S</code></th>
+				<th><code>SRL</code></th>
+				<th><code>SRL.L</code></th>
+				<th><code>SRL.S</code></th>
 			</tr>
 			<tr>
 				<td><code>(HL)</code></td>

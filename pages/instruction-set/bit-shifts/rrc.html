@@ -1,13 +1,13 @@
 ---
 layout: page
-title: RL
-permalink: /instruction-set/rl.html
+title: RRC
+permalink: /instruction-set/rrc.html
 ---
 
 <table>
 	<thead><tr>
-		<th><pre style="margin: 0px; padding: 0px"><img src="{{ site.baseurl }}/images/bit-ops/small/rl.png">&emsp;</pre></th>
-		<th>RL R</th>
+		<th><pre style="margin: 0px; padding: 0px"><img src="{{ site.baseurl }}/images/bit-ops/small/rrc.png">&emsp;</pre></th>
+		<th>RRC R</th>
 	</tr></thead>
 	<tbody>
 		<tr>
@@ -16,15 +16,15 @@ permalink: /instruction-set/rl.html
 		</tr>
 		<tr>
 		<td>Summary</td>
-		<td>Rotate left</td>
+		<td>Rotate right with carry</td>
 		</tr>
 		<tr>
 		<td>Description</td>
-		<td>Rotates the contents of <code>r</code> left by one bit. The leaving (7th) bit is moved into the carry and the carry is moved into the first bit of <code>r</code>.</td>
+		<td>Rotates the contents of <code>r</code> right by one bit. The leaving (0th) bit is copied into the carry, and into the first bit of <code>r</code>.</td>
 		</tr>
 		<tr>
 		<td>Uses</td>
-		<td>Reading bit-wise data, most significant bit first (left-to-right)</td>
+		<td>Reading bit-wise data, least significant bit first (right-to-left), while preserving the original data (after it is performed eight times)</td>
 		</tr>
 		<tr>
 		<td>Byte Count</td>
@@ -35,9 +35,9 @@ permalink: /instruction-set/rl.html
 		<td><table>
 			<tr>
 				<th>Operand</th>
-				<th><code>RL</code></th>
-				<th><code>RL.L</code></th>
-				<th><code>RL.S</code></th>
+				<th><code>RRC</code></th>
+				<th><code>RRC.L</code></th>
+				<th><code>RRC.S</code></th>
 			</tr>
 			<tr>
 				<td><code>(HL)</code></td>
