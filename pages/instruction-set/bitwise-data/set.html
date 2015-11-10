@@ -1,12 +1,12 @@
 ---
 layout: page
-title: BIT
-permalink: /instruction-set/bit.html
+title: SET
+permalink: /instruction-set/set.html
 ---
 
 <table>
 	<thead><tr>
-		<th>BIT N,op8</th>
+		<th>SET N,op8</th>
 	</tr></thead>
 	<tbody>
 		<tr>
@@ -17,15 +17,15 @@ permalink: /instruction-set/bit.html
 		</tr>
 		<tr>
 		<td>Summary</td>
-		<td>Test if the specific bit is set</td>
+		<td>Set the specific bit</td>
 		</tr>
 		<tr>
 		<td>Description</td>
-		<td>Returns the opposite of the specified bit into the Z flag (ie. If the specified bit is zero, the Z flag is set; if the bit is not zero, the Z flag is reset)</td>
+		<td>Sets the <code>N</code>th bit of <code>op8</code></td>
 		</tr>
 		<tr>
 		<td>Uses</td>
-		<td>Testing single bits. This can also be useful to check OS flags, for example <code><pre>BIT	testInverse,(IY+textFlags)</pre></code></td>
+		<td>Setting single bits. This can also be useful to set OS flags, for example <code><pre>SET	testInverse,(IY+textFlags)</pre></code></td>
 		</tr>
 		<tr>
 		<td>Byte Count</td>
