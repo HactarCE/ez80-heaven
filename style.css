@@ -10,8 +10,12 @@ article, aside, footer, header, main, nav, section {
 	margin: 0;
 }
 
+table {
+	margin: 10px
+}
+
 p + p {
-	margin-top: 2em;
+	margin-top: 10px;
 }
 
 table, table td, table th {
