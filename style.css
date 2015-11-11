@@ -11,7 +11,7 @@ article, aside, footer, header, main, nav, section {
 }
 
 table {
-	margin: 10px
+	margin: 15px 10px;
 }
 
 p + p {
