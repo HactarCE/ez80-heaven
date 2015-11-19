@@ -35,7 +35,7 @@ table tbody + tbody {
 }
 
 td table {
-	margin: 5px;
+	margin: 0px 10px;
 }
 
 header {

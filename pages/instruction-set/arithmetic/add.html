@@ -1,0 +1,63 @@
+---
+layout: page
+title: ADD
+permalink: /instruction-set/add.html
+---
+
+<table>
+	<thead><tr>
+		<th>ADD M,N</th>
+		<th>Add</th>
+	</tr></thead>
+	<tbody>
+		<tr>
+		<td>Description</td>
+		<td>Adds <code>M</code> and <code>N</code> and stores the result in <code>M</code><br><code><pre>M += N</pre></code>.</td>
+		</tr>
+		<tr>
+		<td>Uses</td>
+		<td>Adding two numbers together. (Note that unlike <code><a href="{{ site.baseurl }}/instruction-set/adc.html">ADC</a></code> this instruction supports using the index registers <code>IX</code> and <code>IY</code>, although you cannot use both index registers in the same <code>ADD</code> instruction.)</td>
+		</tr>
+		<tr>
+		<td>Allowed Instructions</td>
+		<td><table>
+			<tr>
+				<th>Instruction</th>
+				<th>Opcode</th>
+				<th>CC (ADL/non-ADL)</th>
+				<th>CC (.S)</th>
+				<th>CC (.L)</th>
+			</tr>
+			<tr><td><code>add a,a</code></td>		<td><code>$87</code></td>			<td>1</td><td>X</td><td>X</td></tr>
+			<tr><td><code>add a,b</code></td>		<td><code>$80</code></td>			<td>1</td><td>X</td><td>X</td></tr>
+			<tr><td><code>add a,c</code></td>		<td><code>$81</code></td>			<td>1</td><td>X</td><td>X</td></tr>
+			<tr><td><code>add a,d</code></td>		<td><code>$82</code></td>			<td>1</td><td>X</td><td>X</td></tr>
+			<tr><td><code>add a,e</code></td>		<td><code>$83</code></td>			<td>1</td><td>X</td><td>X</td></tr>
+			<tr><td><code>add a,h</code></td>		<td><code>$84</code></td>			<td>1</td><td>X</td><td>X</td></tr>
+			<tr><td><code>add a,l</code></td>		<td><code>$85</code></td>			<td>1</td><td>X</td><td>X</td></tr>
+			<tr><td><code>add a,ixh</code></td>		<td><code>$DD, $84</code></td>		<td>2</td><td>X</td><td>X</td></tr>
+			<tr><td><code>add a,ixl</code></td>		<td><code>$DD, $85</code></td>		<td>2</td><td>X</td><td>X</td></tr>
+			<tr><td><code>add a,iyh</code></td>		<td><code>$FD, $84</code></td>		<td>2</td><td>X</td><td>X</td></tr>
+			<tr><td><code>add a,iyl</code></td>		<td><code>$FD, $85</code></td>		<td>2</td><td>X</td><td>X</td></tr>
+			<tr><td><code>add a,(hl)</code></td>	<td><code>$86</code></td>			<td>2</td><td>3</td><td>3</td></tr>
+			<tr><td><code>add a,(ix+n)</code></td>	<td><code>$DD, $86, n</code></td>	<td>4</td><td>5</td><td>5</td></tr>
+			<tr><td><code>add a,(iy+n)</code></td>	<td><code>$FD, $86, n</code></td>	<td>4</td><td>5</td><td>5</td></tr>
+			<tr><td><code>add a,n</code></td>		<td><code>$C6, n</code></td>		<td>2</td><td>X</td><td>X</td></tr>
+			<tr><td><code>add hl,bc</code></td>		<td><code>$ED, $09</code></td>		<td>1</td><td>2</td><td>2</td></tr>
+			<tr><td><code>add hl,de</code></td>		<td><code>$ED, $19</code></td>		<td>1</td><td>2</td><td>2</td></tr>
+			<tr><td><code>add hl,hl</code></td>		<td><code>$ED, $29</code></td>		<td>1</td><td>2</td><td>2</td></tr>
+			<tr><td><code>add hl,sp</code></td>		<td><code>$ED, $39</code></td>		<td>1</td><td>2</td><td>2</td></tr>
+			<tr><td><code>add ix,bc</code></td>		<td><code>$DD, $09</code></td>		<td>2</td><td>3</td><td>3</td></tr>
+			<tr><td><code>add ix,de</code></td>		<td><code>$DD, $19</code></td>		<td>2</td><td>3</td><td>3</td></tr>
+			<tr><td><code>add ix,ix</code></td>		<td><code>$DD, $29</code></td>		<td>2</td><td>3</td><td>3</td></tr>
+			<tr><td><code>add iy,bc</code></td>		<td><code>$FD, $09</code></td>		<td>2</td><td>3</td><td>3</td></tr>
+			<tr><td><code>add iy,de</code></td>		<td><code>$FD, $19</code></td>		<td>2</td><td>3</td><td>3</td></tr>
+			<tr><td><code>add iy,iy</code></td>		<td><code>$FD, $29</code></td>		<td>2</td><td>3</td><td>3</td></tr>
+		</table></td>
+		<tr>
+		<td>See Also</td>
+		<td><a href="{{ site.baseurl }}/instruction-set/adc.html">ADC</a>, <a href="{{ site.baseurl }}/instruction-set/sbc.html">SBC</a>, <a href="{{ site.baseurl }}/instruction-set/sub.html">SUB</a></td>
+		</tr>
+		</tr>
+	</tbody>
+</table>
