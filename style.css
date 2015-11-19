@@ -60,11 +60,14 @@ code {
 	padding: 2px 4px;
 }
 
+.codeblock {
+	display: block;
+}
+
 nav {
 	background-color: #20416C;
 	padding: 10px;
 	border-radius: 0px 0px 10px 10px;
-	display: block;
 }
 
 nav li {
