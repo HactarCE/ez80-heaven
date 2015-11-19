@@ -16,7 +16,7 @@ permalink: /instruction-set/adc.html
 		</tr>
 		<tr>
 		<td>Uses</td>
-		<td>Storing the state of the carry flag in either <code>A</code> or <code>HL</code> with <code>adc a,0</code> or <code>ld bc/de,0 \ adc hl,bc/de</code>. Can be useful otherwise in very specific situations. See also: <a href="{{ site.baseurl }}/instruction-set/add.html">ADD</a></code></td>
+		<td>Storing the state of the carry flag in either <code>A</code> or <code>HL</code> with <code>adc a,0</code> or <code>ld bc/de,0 \ adc hl,bc/de</code>. Can be useful otherwise in very specific situations.</td>
 		</tr>
 		<tr>
 		<td>Allowed Instructions</td>
@@ -42,12 +42,16 @@ permalink: /instruction-set/adc.html
 			<tr><td><code>adc a,(hl)</code></td>	<td><code>$8E</code></td>			<td>2</td><td>3</td><td>3</td></tr>
 			<tr><td><code>adc a,(ix+n)</code></td>	<td><code>$DD, $8E, n</code></td>	<td>4</td><td>5</td><td>5</td></tr>
 			<tr><td><code>adc a,(iy+n)</code></td>	<td><code>$FD, $8E, n</code></td>	<td>4</td><td>5</td><td>5</td></tr>
-			<tr><td><code>adc a,n</code></td>		<td><code>$CE, n</code></td>			<td>2</td><td>X</td><td>X</td></tr>
+			<tr><td><code>adc a,n</code></td>		<td><code>$CE, n</code></td>			<td>2</td>X<td></td><td>X</td></tr>
 			<tr><td><code>adc hl,bc</code></td>		<td><code>$ED, $4A</code></td>		<td>2</td><td>3</td><td>3</td></tr>
 			<tr><td><code>adc hl,de</code></td>		<td><code>$ED, $5A</code></td>		<td>2</td><td>3</td><td>3</td></tr>
 			<tr><td><code>adc hl,hl</code></td>		<td><code>$ED, $6A</code></td>		<td>2</td><td>3</td><td>3</td></tr>
 			<tr><td><code>adc hl,sp</code></td>		<td><code>$ED, $7A</code></td>		<td>2</td><td>3</td><td>3</td></tr>
 		</table></td>
+		<tr>
+		<td>See Also</td>
+		<td><code><a href="{{ site.baseurl }}/instruction-set/add.html">ADD</a></code></td>
+		</tr>
 		</tr>
 	</tbody>
 </table>

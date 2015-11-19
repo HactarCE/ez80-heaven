@@ -34,6 +34,10 @@ table tbody + tbody {
 	border-top: 2px solid #D0D0D0;
 }
 
+td table {
+	padding: 0;
+}
+
 header {
 	background-color: #82A1FF;
 	color: white;
