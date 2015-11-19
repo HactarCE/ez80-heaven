@@ -1,0 +1,64 @@
+---
+layout: page
+title: SET
+permalink: /instruction-set/set.html
+---
+
+<table>
+	<thead><tr>
+		<th>SET N,op8</th>
+	</tr></thead>
+	<tbody>
+		<tr>
+		<td>Arguments</td>
+		<td>
+			<code>N</code> - A hard-coded integer from 0-7<br>
+			<code>op8</code> - Any 8-bit register or <code>(HL)</code>,<code>(IX+n)</code>,<code>(IY+n)</code></td>
+		</tr>
+		<tr>
+		<td>Summary</td>
+		<td>Set the specific bit</td>
+		</tr>
+		<tr>
+		<td>Description</td>
+		<td>Sets the <code>N</code>th bit of <code>op8</code></td>
+		</tr>
+		<tr>
+		<td>Uses</td>
+		<td>Setting single bits. This can also be useful to set OS flags, for example <code><pre>SET	testInverse,(IY+textFlags)</pre></code></td>
+		</tr>
+		<tr>
+		<td>Byte Count</td>
+		<td>2</td>
+		</tr>
+		<tr>
+		<td>Clock Cycles</td>
+		<td><table>
+			<tr>
+				<th>Operand</th>
+				<th><code>BIT</code></th>
+				<th><code>BIT.L</code></th>
+				<th><code>BIT.S</code></th>
+			</tr>
+			<tr>
+				<td><code>(HL)</code></td>
+				<td>3</td>
+				<td>4</td>
+				<td>4</td>
+			</tr>
+			<tr>
+				<td><code>(IX/Y+n)</code></td>
+				<td>5</td>
+				<td>6</td>
+				<td>6</td>
+			</tr>
+			<tr>
+				<td><code>r</code></td>
+				<td>2</td>
+				<td>N/A</td>
+				<td>N/A</td>
+			</tr>
+		</table></td>
+		</tr>
+	</tbody>
+</table>
