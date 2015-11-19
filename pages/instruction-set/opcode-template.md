@@ -1,7 +1,7 @@
 ---
 layout: page
 title: ADC
-permalink: /instruction-set/adc.html
+permalink: /instruction-set/template.html
 ---
 
 Description
