@@ -27,29 +27,29 @@ permalink: /instruction-set/adc.html
 			<tr>
 				<th>Instruction</th>
 				<th>Opcode</th>
-				<th>Clock Cycles (ADL/non-ADL)</th>
+				<th>Clock Cycles<br>(ADL/non-ADL)</th>
 				<th>Clock Cycles (.S)</th>
 				<th>Clock Cycles (.L)</th>
 			</tr>
-			<tr><td><code>adc a,a</code></td><td>$8F</td><td>1</td><td>X</td><td>X</td></tr>
-			<tr><td><code>adc a,b</code></td><td>$88</td><td>1</td><td>X</td><td>X</td></tr>
-			<tr><td><code>adc a,c</code></td><td>$89</td><td>1</td><td>X</td><td>X</td></tr>
-			<tr><td><code>adc a,d</code></td><td>$8A</td><td>1</td><td>X</td><td>X</td></tr>
-			<tr><td><code>adc a,e</code></td><td>$8B</td><td>1</td><td>X</td><td>X</td></tr>
-			<tr><td><code>adc a,h</code></td><td>$8C</td><td>1</td><td>X</td><td>X</td></tr>
-			<tr><td><code>adc a,l</code></td><td>$8D</td><td>1</td><td>X</td><td>X</td></tr>
-			<tr><td><code>adc a,ixh</code></td><td>$DD, $8C</td><td>2</td><td>X</td><td>X</td></tr>
-			<tr><td><code>adc a,ixl</code></td><td>$DD, $8D</td><td>2</td><td>X</td><td>X</td></tr>
-			<tr><td><code>adc a,iyh</code></td><td>$FD, $8C</td><td>2</td><td>X</td><td>X</td></tr>
-			<tr><td><code>adc a,iyl</code></td><td>$FD, $8D</td><td>2</td><td>X</td><td>X</td></tr>
-			<tr><td><code>adc a,(hl)</code></td><td>$8E</td><td>2</td><td>3</td><td>3</td></tr>
-			<tr><td><code>adc a,(ix+n)</code></td><td>$DD, $8E, n</td><td>4</td><td>5</td><td>5</td></tr>
-			<tr><td><code>adc a,(iy+n)</code></td><td>$FD, $8E, n</td><td>4</td><td>5</td><td>5</td></tr>
-			<tr><td><code>adc a,n</code></td><td>$CE, n</td><td>2</td><td>X</td><td>X</td></tr>
-			<tr><td><code>adc hl,bc</code></td><td>$ED, $4A</td><td>2</td><td>3</td><td>3</td></tr>
-			<tr><td><code>adc hl,de</code></td><td>$ED, $5A</td><td>2</td><td>3</td><td>3</td></tr>
-			<tr><td><code>adc hl,hl</code></td><td>$ED, $6A</td><td>2</td><td>3</td><td>3</td></tr>
-			<tr><td><code>adc hl,sp</code></td><td>$ED, $7A</td><td>2</td><td>3</td><td>3</td></tr>
+			<tr><td><code>adc a,a</code></td>		<td><code>$8F</code></td>			<td>1</td><td>X</td><td>X</td></tr>
+			<tr><td><code>adc a,b</code></td>		<td><code>$88</code></td>			<td>1</td><td>X</td><td>X</td></tr>
+			<tr><td><code>adc a,c</code></td>		<td><code>$89</code></td>			<td>1</td><td>X</td><td>X</td></tr>
+			<tr><td><code>adc a,d</code></td>		<td><code>$8A</code></td>			<td>1</td><td>X</td><td>X</td></tr>
+			<tr><td><code>adc a,e</code></td>		<td><code>$8B</code></td>			<td>1</td><td>X</td><td>X</td></tr>
+			<tr><td><code>adc a,h</code></td>		<td><code>$8C</code></td>			<td>1</td><td>X</td><td>X</td></tr>
+			<tr><td><code>adc a,l</code></td>		<td><code>$8D</code></td>			<td>1</td><td>X</td><td>X</td></tr>
+			<tr><td><code>adc a,ixh</code></td>		<td><code>$DD, $8C</code></td>		<td>2</td><td>X</td><td>X</td></tr>
+			<tr><td><code>adc a,ixl</code></td>		<td><code>$DD, $8D</code></td>		<td>2</td><td>X</td><td>X</td></tr>
+			<tr><td><code>adc a,iyh</code></td>		<td><code>$FD, $8C</code></td>		<td>2</td><td>X</td><td>X</td></tr>
+			<tr><td><code>adc a,iyl</code></td>		<td><code>$FD, $8D</code></td>		<td>2</td><td>X</td><td>X</td></tr>
+			<tr><td><code>adc a,(hl)</code></td>	<td><code>$8E</code></td>			<td>2</td><td>3</td><td>3</td></tr>
+			<tr><td><code>adc a,(ix+n)</code></td>	<td><code>$DD, $8E, n</code></td>	<td>4</td><td>5</td><td>5</td></tr>
+			<tr><td><code>adc a,(iy+n)</code></td>	<td><code>$FD, $8E, n</code></td>	<td>4</td><td>5</td><td>5</td></tr>
+			<tr><td><code>adc a,n</code></td>		<td><code>$CE, n</code></td>			<td>2</td><td>X</td><td>X</td></tr>
+			<tr><td><code>adc hl,bc</code></td>		<td><code>$ED, $4A</code></td>		<td>2</td><td>3</td><td>3</td></tr>
+			<tr><td><code>adc hl,de</code></td>		<td><code>$ED, $5A</code></td>		<td>2</td><td>3</td><td>3</td></tr>
+			<tr><td><code>adc hl,hl</code></td>		<td><code>$ED, $6A</code></td>		<td>2</td><td>3</td><td>3</td></tr>
+			<tr><td><code>adc hl,sp</code></td>		<td><code>$ED, $7A</code></td>		<td>2</td><td>3</td><td>3</td></tr>
 		</table></td>
 		</tr>
 	</tbody>
