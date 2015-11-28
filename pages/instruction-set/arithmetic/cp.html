@@ -1,35 +1,22 @@
 ---
 layout: page
-title: ADD
-permalink: /instruction-set/add.html
+title: CP
+permalink: /instruction-set/cp.html
 ---
 
 <table>
 	<thead><tr>
-		<th>ADD M,N</th>
-		<th>Add</th>
+		<th>CP M,N</th>
+		<th>Compare</th>
 	</tr></thead>
 	<tbody>
 		<tr>
 		<td>Description</td>
-		<td>Adds <code>M</code> and <code>N</code> and stores the result in <code>M</code>.<br><code class="codeblock">M += N</code></td>
+		<td>Subtracts <code>N</code> from <code>M</code>, but doesn't update <code>M</code>.<br><code class="codeblock">[ M - N ]</code></td>
 		</tr>
 		<tr>
 		<td>Uses</td>
-		<td>Adding two numbers together. (Note that unlike <code><a href="{{ site.baseurl }}/instruction-set/adc.html">ADC</a></code> this instruction supports using the index registers <code>IX</code> and <code>IY</code>, although you cannot use both index registers in the same <code>ADD</code> instruction.)</td>
-		</tr>
-		<tr>
-		<td>Results</td>
-		<td><table>
-			<tr><td><code>M</code></td>			<td>Set to result of <code>M + N</code></td>
-			<tr><td><code>S</code> flag (8-bit)</td>	<td>Set if result is negative; else reset</td>
-			<tr><td><code>Z</code> flag (8-bit)</td>	<td>Set if result is 0; else reset</td>
-			<tr><td><code>H</code> flag (8-bit)</td>	<td>Set if was carry from bit 3; else reset</td>
-			<tr><td><code>H</code> flag (16-bit)</td>	<td>Set if was carry from bit 11; else reset</td>
-			<tr><td><code>P/V</code> flag (8-bit)</td>	<td>Set if was overflow; else reset</td>
-			<tr><td><code>N</code> flag</td>	<td>Reset</td>
-			<tr><td><code>C</code> flag</td>	<td>Set if carry from most significant bit; else reset</td>
-		</table></td>
+		<td>Comparing two one-byte numbers/values.</td>
 		</tr>
 		<tr>
 		<td>Allowed Instructions</td>
