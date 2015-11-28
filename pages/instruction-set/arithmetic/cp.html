@@ -12,11 +12,27 @@ permalink: /instruction-set/cp.html
 	<tbody>
 		<tr>
 		<td>Description</td>
-		<td>Subtracts <code>N</code> from <code>M</code>, but doesn't update <code>M</code>. (Although neither of the operands is modified, the flags are just as though the subtraction operation had been completed.)<br><code class="codeblock">[ M - N ]</code></td>
+		<td>Subtracts <code>N</code> from <code>M</code>, but doesn't update <code>M</code>. (Although neither of the operands is modified, the flags are.)<br><code class="codeblock">[ M - N ]</code></td>
 		</tr>
 		<tr>
 		<td>Uses</td>
 		<td>Comparing two one-byte numbers/values.</td>
+		</tr>
+		<tr>
+		<td>Results</td>
+		<td><table>
+			<tr><th>Register/Flag</th><th>8-bit</th><th>16-bit (non-ADL)</th><th>24-bit (non-ADL)</th></tr>
+			<tr><td><code>M</code></td>					<td colspan=3>Set to result of <code>M + N + Carry</code></td></tr>
+			<tr><td><code>S</code> flag</td>			<td colspan=3>Set if result is negative; else reset</td></tr>
+			<tr><td><code>Z</code> flag</td>			<td colspan=3>Set if result is 0; else reset</td></tr>
+			<tr><td><code>H</code> flag (8-bit)</td>	<td>Set if carry from bit 3; else reset</td></tr>
+														<td colspan=2>Set if carry from bit 11; else reset</td>
+			<tr><td><code>P/V</code> flag</td>			<td colspan=3>Set if overflow; else reset</td></tr>
+			<tr><td><code>N</code> flag</td>			<td colspan=3>Reset</td></tr>
+			<tr><td><code>C</code> flag</td>			<td>Set if carry from bit 7; else reset</td>
+														<td>Set if carry from bit 15; else reset</td>
+														<td>Set if carry from bit 23; else reset</td></tr>
+		</table></td>
 		</tr>
 		<tr>
 		<td>Allowed Instructions</td>
