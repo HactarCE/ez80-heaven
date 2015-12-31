@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>{{ site.name }}: {% if page.title %}{{ page.title }}{% endif %}</title>
+
+		{% include meta.html %}
+
+		<!--[if lt IE 9]>
+			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+
+		<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
+		<!-- link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" / -->
+
+		<!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
+	</head>
+
+	<header class="banner">
+		<h1 style="float: left">eZ80 Heaven</h1>
+		<img src="{{ site.baseurl }}/images/84pce/84pce-red.png" style="width: 34px; height: 98px; float: right">
+		<h3 style="clear: left">All the eZ80 info you ever cared to know</h3>
+	</header>
+
+	<nav>
+		<ul>
+			<li {% if page.url == "/index.html" %}class="currentpage"{% endif %}>				<a href="{{ site.baseurl }}/">Home</a></li>
+			<li {% if page.url contains "/instruction-set" %}class="currentpage"{% endif %}>	<a href="{{ site.baseurl }}/instruction-set">Instruction Set</a></li>
+			<li {% if page.url contains "/tutorials" %}class="currentpage"{% endif %}>	<a href="{{ site.baseurl }}/tutorials">Tutorials</a></li>
+		</ul>
+	</nav>
+
+	<!-- aside>
+		<h3>Tutorials</h3>
+		<ul>
+			<li><a href="tutorial1">Tutorial1</a></li>
+			<li><a href="tutorial2">Tutorial2</a></li>
+			<li><a href="tutorial3">Tutorial3</a></li>
+		</ul>
+	</aside -->
+
+	<main class="fullwidth">
+		{{ content }}
+	</main>
+
+	<footer>
+		<p>This website is created and maintained by an individual known as <a href="https://www.cemetech.net/forum/profile.php?mode=viewprofile&u=13055">Hactar</a> on the <a href="http://www.cemtech.net/forum/">Cemetech forums</a>.<br>Feel free to PM me over there if you have any questions, concerns or suggestions about this site.</p>
+	</footer>
+
+	</body>
+</html>

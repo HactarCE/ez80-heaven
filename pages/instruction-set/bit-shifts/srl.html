@@ -1,0 +1,63 @@
+---
+layout: page
+title: SRL
+permalink: /instruction-set/srl.html
+---
+
+<table>
+	<thead><tr>
+		<th><img src="{{ site.baseurl }}/images/bit-ops/small/srl.png" style="margin: 0px; padding: 0px">&emsp;</th>
+		<th>SRL op8</th>
+	</tr></thead>
+	<tbody>
+		<tr>
+		<td>Arguments</td>
+		<td><code>op8</code> - Any 8-bit register or <code>(HL)</code>,<code>(IX+n)</code>,<code>(IY+n)</code></td>
+		</tr>
+		<tr>
+		<td>Summary</td>
+		<td>Shift right logical</td>
+		</tr>
+		<tr>
+		<td>Description</td>
+		<td>Rotates the contents of <code>op8</code> right by one bit. The leaving (0th) bit is moved into the carry, and the first bit of <code>op8</code> is reset. (Similar to <a href="{{ site.baseurl }}/instruction-set/sla.html">SLA</a>)</td>
+		</tr>
+		<tr>
+		<td>Uses</td>
+		<td>Very quickly dividing an 8-bit number by two. If the number was odd, the carry flag will be set (else reset).</td>
+		</tr>
+		<tr>
+		<td>Byte Count</td>
+		<td>2</td>
+		</tr>
+		<tr>
+		<td>Clock Cycles</td>
+		<td><table>
+			<tr>
+				<th>Operand</th>
+				<th><code>SRL</code></th>
+				<th><code>SRL.L</code></th>
+				<th><code>SRL.S</code></th>
+			</tr>
+			<tr>
+				<td><code>(HL)</code></td>
+				<td>5</td>
+				<td>6</td>
+				<td>6</td>
+			</tr>
+			<tr>
+				<td><code>(IX/Y+n)</code></td>
+				<td>7</td>
+				<td>8</td>
+				<td>8</td>
+			</tr>
+			<tr>
+				<td><code>r</code></td>
+				<td>2</td>
+				<td>N/A</td>
+				<td>N/A</td>
+			</tr>
+		</table></td>
+		</tr>
+	</tbody>
+</table>

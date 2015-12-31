@@ -1,0 +1,74 @@
+---
+layout: page
+title: ADC
+permalink: /instruction-set/adc.html
+---
+
+<table>
+	<thead><tr>
+		<th>ADC M,N</th>
+		<th>Add with carry</th>
+	</tr></thead>
+	<tbody>
+		<tr>
+		<td>Description</td>
+		<td>Adds <code>M</code>, <code>N</code>, and the carry flag (+0 or +1) and stores the result in <code>M</code>.<br><code class="codeblock">M += N + Carry</code></td>
+		</tr>
+		<tr>
+		<td>Uses</td>
+		<td>Storing the state of the carry flag in either <code>A</code> or <code>HL</code> with <code>adc a,0</code> or <code>ld bc/de,0 \ adc hl,bc/de</code>. Can be useful otherwise in very specific situations.</td>
+		</tr>
+		<tr>
+		<td>Results</td>
+		<td><table>
+			<tr><th>Register/Flag</th><th>8-bit</th><th>16-bit (non-ADL)</th><th>24-bit (ADL)</th></tr>
+			<tr><td><code>M</code></td>					<td colspan=3>Set to result of <code>M + N + Carry</code></td></tr>
+			<tr><td><code>S</code> flag</td>			<td colspan=3>Set if result is negative; else reset</td></tr>
+			<tr><td><code>Z</code> flag</td>			<td colspan=3>Set if result is 0; else reset</td></tr>
+			<tr><td><code>H</code> flag (8-bit)</td>	<td>Set if carry from bit 3; else reset</td>
+														<td colspan=2>Set if carry from bit 11; else reset</td>
+			<tr><td><code>P/V</code> flag</td>			<td colspan=3>Set if overflow; else reset</td></tr>
+			<tr><td><code>N</code> flag</td>			<td colspan=3>Reset</td></tr>
+			<tr><td><code>C</code> flag</td>			<td>Set if carry from bit 7; else reset</td>
+														<td>Set if carry from bit 15; else reset</td>
+														<td>Set if carry from bit 23; else reset</td></tr>
+		</table></td>
+		</tr>
+		<tr>
+		<td>Allowed Instructions</td>
+		<td><table>
+			<tr>
+				<th>Instruction</th>
+				<th>Opcode</th>
+				<th>CC (ADL/non-ADL)</th>
+				<th>CC (.S)</th>
+				<th>CC (.L)</th>
+				<th>Flags</th>
+			</tr>
+			<tr><td><code>adc a,a</code></td>		<td><code>$8F</code></td>			<td>1</td><td>X</td><td>X</td></tr>
+			<tr><td><code>adc a,b</code></td>		<td><code>$88</code></td>			<td>1</td><td>X</td><td>X</td></tr>
+			<tr><td><code>adc a,c</code></td>		<td><code>$89</code></td>			<td>1</td><td>X</td><td>X</td></tr>
+			<tr><td><code>adc a,d</code></td>		<td><code>$8A</code></td>			<td>1</td><td>X</td><td>X</td></tr>
+			<tr><td><code>adc a,e</code></td>		<td><code>$8B</code></td>			<td>1</td><td>X</td><td>X</td></tr>
+			<tr><td><code>adc a,h</code></td>		<td><code>$8C</code></td>			<td>1</td><td>X</td><td>X</td></tr>
+			<tr><td><code>adc a,l</code></td>		<td><code>$8D</code></td>			<td>1</td><td>X</td><td>X</td></tr>
+			<tr><td><code>adc a,ixh</code></td>		<td><code>$DD, $8C</code></td>		<td>2</td><td>X</td><td>X</td></tr>
+			<tr><td><code>adc a,ixl</code></td>		<td><code>$DD, $8D</code></td>		<td>2</td><td>X</td><td>X</td></tr>
+			<tr><td><code>adc a,iyh</code></td>		<td><code>$FD, $8C</code></td>		<td>2</td><td>X</td><td>X</td></tr>
+			<tr><td><code>adc a,iyl</code></td>		<td><code>$FD, $8D</code></td>		<td>2</td><td>X</td><td>X</td></tr>
+			<tr><td><code>adc a,(hl)</code></td>	<td><code>$8E</code></td>			<td>2</td><td>3</td><td>3</td></tr>
+			<tr><td><code>adc a,(ix+n)</code></td>	<td><code>$DD, $8E, n</code></td>	<td>4</td><td>5</td><td>5</td></tr>
+			<tr><td><code>adc a,(iy+n)</code></td>	<td><code>$FD, $8E, n</code></td>	<td>4</td><td>5</td><td>5</td></tr>
+			<tr><td><code>adc a,n</code></td>		<td><code>$CE, n</code></td>		<td>2</td><td>X</td><td>X</td></tr>
+			<tr><td><code>adc hl,bc</code></td>		<td><code>$ED, $4A</code></td>		<td>2</td><td>3</td><td>3</td></tr>
+			<tr><td><code>adc hl,de</code></td>		<td><code>$ED, $5A</code></td>		<td>2</td><td>3</td><td>3</td></tr>
+			<tr><td><code>adc hl,hl</code></td>		<td><code>$ED, $6A</code></td>		<td>2</td><td>3</td><td>3</td></tr>
+			<tr><td><code>adc hl,sp</code></td>		<td><code>$ED, $7A</code></td>		<td>2</td><td>3</td><td>3</td></tr>
+		</table></td>
+		<tr>
+		<td>See Also</td>
+		<td><a href="{{ site.baseurl }}/instruction-set/add.html">ADD</a>, <a href="{{ site.baseurl }}/instruction-set/sbc.html">SBC</a>, <a href="{{ site.baseurl }}/instruction-set/sub.html">SUB</a></td>
+		</tr>
+		</tr>
+	</tbody>
+</table>

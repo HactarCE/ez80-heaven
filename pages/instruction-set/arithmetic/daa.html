@@ -1,0 +1,80 @@
+---
+layout: page
+title: DAA
+permalink: /instruction-set/daa.html
+---
+
+<table>
+	<thead><tr>
+		<th>DAA M,N</th>
+		<th>Decimal Adjust Accumulator</th>
+	</tr></thead>
+	<tbody>
+		<tr>
+		<td>Description</td>
+		<td>Does cool stuff with binary-coded decimal. (Please someone tell me how this works???)</td>
+		</tr>
+		<tr>
+		<td>Uses</td>
+		<td>BCD stuff. It's really weird.</td>
+		</tr>
+		<tr>
+		<td>Results</td>
+		<td><table>
+			<tr><th>Register/Flag</th><th>8-bit</th><th>16-bit (non-ADL)</th><th>24-bit (ADL)</th></tr>
+			<tr><td><code>S</code> flag</td>			<td colspan=3>Set if result is zero; else reset</td></tr>
+			<tr><td><code>Z</code> flag</td>			<td colspan=2>Set if result is 0; else reset</td></tr>
+			<tr><td><code>H</code> flag</td>	<td colspan=3>Weird stuff</td></tr>
+			<tr><td><code>P/V</code> flag</td>			<td>Set if overflow; else reset</td>
+														<td colspan=2>Not affected</td></tr>
+			<tr><td><code>N</code> flag</td>			<td colspan=3>Reset</td></tr>
+			<tr><td><code>C</code> flag</td>			<td>Set if carry from bit 7; else reset</td>
+														<td>Set if carry from bit 15; else reset</td>
+														<td>Set if carry from bit 23; else reset</td></tr>
+		</table></td>
+		</tr>
+		<tr>
+		<td>Allowed Instructions</td>
+		<td><table>
+			<tr>
+				<th>Instruction</th>
+				<th>Opcode</th>
+				<th>CC (ADL/non-ADL)</th>
+				<th>CC (.S)</th>
+				<th>CC (.L)</th>
+			</tr>
+			<tr><td><code>add a,a</code></td>		<td><code>$87</code></td>			<td>1</td><td>X</td><td>X</td></tr>
+			<tr><td><code>add a,b</code></td>		<td><code>$80</code></td>			<td>1</td><td>X</td><td>X</td></tr>
+			<tr><td><code>add a,c</code></td>		<td><code>$81</code></td>			<td>1</td><td>X</td><td>X</td></tr>
+			<tr><td><code>add a,d</code></td>		<td><code>$82</code></td>			<td>1</td><td>X</td><td>X</td></tr>
+			<tr><td><code>add a,e</code></td>		<td><code>$83</code></td>			<td>1</td><td>X</td><td>X</td></tr>
+			<tr><td><code>add a,h</code></td>		<td><code>$84</code></td>			<td>1</td><td>X</td><td>X</td></tr>
+			<tr><td><code>add a,l</code></td>		<td><code>$85</code></td>			<td>1</td><td>X</td><td>X</td></tr>
+			<tr><td><code>add a,ixh</code></td>		<td><code>$DD, $84</code></td>		<td>2</td><td>X</td><td>X</td></tr>
+			<tr><td><code>add a,ixl</code></td>		<td><code>$DD, $85</code></td>		<td>2</td><td>X</td><td>X</td></tr>
+			<tr><td><code>add a,iyh</code></td>		<td><code>$FD, $84</code></td>		<td>2</td><td>X</td><td>X</td></tr>
+			<tr><td><code>add a,iyl</code></td>		<td><code>$FD, $85</code></td>		<td>2</td><td>X</td><td>X</td></tr>
+			<tr><td><code>add a,(hl)</code></td>	<td><code>$86</code></td>			<td>2</td><td>3</td><td>3</td></tr>
+			<tr><td><code>add a,(ix+n)</code></td>	<td><code>$DD, $86, n</code></td>	<td>4</td><td>5</td><td>5</td></tr>
+			<tr><td><code>add a,(iy+n)</code></td>	<td><code>$FD, $86, n</code></td>	<td>4</td><td>5</td><td>5</td></tr>
+			<tr><td><code>add a,n</code></td>		<td><code>$C6, n</code></td>		<td>2</td><td>X</td><td>X</td></tr>
+			<tr><td><code>add hl,bc</code></td>		<td><code>$ED, $09</code></td>		<td>1</td><td>2</td><td>2</td></tr>
+			<tr><td><code>add hl,de</code></td>		<td><code>$ED, $19</code></td>		<td>1</td><td>2</td><td>2</td></tr>
+			<tr><td><code>add hl,hl</code></td>		<td><code>$ED, $29</code></td>		<td>1</td><td>2</td><td>2</td></tr>
+			<tr><td><code>add hl,sp</code></td>		<td><code>$ED, $39</code></td>		<td>1</td><td>2</td><td>2</td></tr>
+			<tr><td><code>add ix,bc</code></td>		<td><code>$DD, $09</code></td>		<td>2</td><td>3</td><td>3</td></tr>
+			<tr><td><code>add ix,de</code></td>		<td><code>$DD, $19</code></td>		<td>2</td><td>3</td><td>3</td></tr>
+			<tr><td><code>add ix,ix</code></td>		<td><code>$DD, $29</code></td>		<td>2</td><td>3</td><td>3</td></tr>
+			<tr><td><code>add ix,sp</code></td>		<td><code>$DD, $39</code></td>		<td>2</td><td>3</td><td>3</td></tr>
+			<tr><td><code>add iy,bc</code></td>		<td><code>$FD, $09</code></td>		<td>2</td><td>3</td><td>3</td></tr>
+			<tr><td><code>add iy,de</code></td>		<td><code>$FD, $19</code></td>		<td>2</td><td>3</td><td>3</td></tr>
+			<tr><td><code>add iy,iy</code></td>		<td><code>$FD, $29</code></td>		<td>2</td><td>3</td><td>3</td></tr>
+			<tr><td><code>add iy,sp</code></td>		<td><code>$FD, $39</code></td>		<td>2</td><td>3</td><td>3</td></tr>
+		</table></td>
+		<tr>
+		<td>See Also</td>
+		<td><a href="{{ site.baseurl }}/instruction-set/adc.html">ADC</a>, <a href="{{ site.baseurl }}/instruction-set/sbc.html">SBC</a>, <a href="{{ site.baseurl }}/instruction-set/sub.html">SUB</a></td>
+		</tr>
+		</tr>
+	</tbody>
+</table>

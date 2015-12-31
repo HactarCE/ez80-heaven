@@ -1,0 +1,63 @@
+---
+layout: page
+title: SLA
+permalink: /instruction-set/sla.html
+---
+
+<table>
+	<thead><tr>
+		<th><img src="{{ site.baseurl }}/images/bit-ops/small/sla.png" style="margin: 0px; padding: 0px">&emsp;</th>
+		<th>SLA op8</th>
+	</tr></thead>
+	<tbody>
+		<tr>
+		<td>Arguments</td>
+		<td><code>op8</code> - Any 8-bit register or <code>(HL)</code>,<code>(IX+n)</code>,<code>(IY+n)</code></td>
+		</tr>
+		<tr>
+		<td>Summary</td>
+		<td>Shift left arithmetic</td>
+		</tr>
+		<tr>
+		<td>Description</td>
+		<td>Rotates the contents of <code>op8</code> left by one bit. The leaving (7th) bit is moved into the carry, and the first bit of <code>op8</code> is reset. (Quite different from <a href="{{ site.baseurl }}/instruction-set/sra.html">SRA</a>)</td>
+		</tr>
+		<tr>
+		<td>Uses</td>
+		<td>Very quickly multiplying an 8-bit number by two; if the number becomes greater than 255, the carry flag will be set (else reset)</td>
+		</tr>
+		<tr>
+		<td>Byte Count</td>
+		<td>2</td>
+		</tr>
+		<tr>
+		<td>Clock Cycles</td>
+		<td><table>
+			<tr>
+				<th>Operand</th>
+				<th><code>SLA</code></th>
+				<th><code>SLA.L</code></th>
+				<th><code>SLA.S</code></th>
+			</tr>
+			<tr>
+				<td><code>(HL)</code></td>
+				<td>5</td>
+				<td>6</td>
+				<td>6</td>
+			</tr>
+			<tr>
+				<td><code>(IX/Y+n)</code></td>
+				<td>7</td>
+				<td>8</td>
+				<td>8</td>
+			</tr>
+			<tr>
+				<td><code>r</code></td>
+				<td>2</td>
+				<td>N/A</td>
+				<td>N/A</td>
+			</tr>
+		</table></td>
+		</tr>
+	</tbody>
+</table>
